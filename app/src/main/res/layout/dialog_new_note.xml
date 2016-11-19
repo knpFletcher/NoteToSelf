@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent"
+                android:padding="10dp">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/editTitle"
+        android:layout_marginTop="35dp"
+        android:hint="@string/title_hint"
+        android:textColor="@color/colorAccent"
+        android:textSize="25sp"
+        android:layout_marginLeft="11dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/editTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/editDescription"
+        android:layout_marginTop="35dp"
+        android:hint="@string/description_hint"
+        android:textColor="@color/colorAccent"
+        android:textSize="25sp"
+        android:layout_marginLeft="11dp"/>
+
+    <CheckBox
+        android:text="@string/idea_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editDescription"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/checkBoxIdea"
+        android:layout_marginTop="35dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:layout_marginLeft="45dp"
+        android:buttonTint="@color/colorPrimaryDark"/>
+
+    <CheckBox
+        android:text="@string/todo_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBoxIdea"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/checkBoxTodo"
+        android:layout_marginTop="35dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:layout_marginLeft="45dp"
+        android:checked="false"
+        android:buttonTint="@color/colorPrimaryDark"/>
+
+    <CheckBox
+        android:text="@string/important_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBoxTodo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/checkBoxImportant"
+        android:layout_marginTop="35dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:layout_marginLeft="45dp"
+        android:buttonTint="@color/colorPrimaryDark"/>
+
+    <Button
+        android:text="@string/ok_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnCancel"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/btnOK"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"/>
+
+    <Button
+        android:text="@string/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCancel"
+        android:layout_below="@+id/checkBoxImportant"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="35dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewImportant"
+        android:src="@drawable/ic_lightbulb_outline_black_24dp"
+        android:layout_alignTop="@+id/checkBoxIdea"
+        android:layout_alignLeft="@+id/editDescription"
+        android:layout_alignStart="@+id/editDescription"
+        android:layout_above="@+id/checkBoxTodo"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewTodo"
+        android:src="@drawable/ic_check_box_black_24dp"
+        android:layout_alignTop="@+id/checkBoxTodo"
+        android:layout_alignLeft="@+id/imageViewImportant"
+        android:layout_alignStart="@+id/imageViewImportant"
+        android:layout_above="@+id/checkBoxImportant"
+        android:layout_alignRight="@+id/imageViewImportant"
+        android:layout_alignEnd="@+id/imageViewImportant"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButtonIdea"
+        android:src="@drawable/ic_warning_black_24dp"
+        android:background="#dfdfdf"
+        android:backgroundTint="#dfdfdf"
+        android:layout_alignTop="@+id/checkBoxImportant"
+        android:layout_alignLeft="@+id/imageViewTodo"
+        android:layout_alignStart="@+id/imageViewTodo"
+        android:layout_above="@+id/btnCancel"
+        android:layout_alignRight="@+id/imageViewTodo"
+        android:layout_alignEnd="@+id/imageViewTodo"/>
+</RelativeLayout>
